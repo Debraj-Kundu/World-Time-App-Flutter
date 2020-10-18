@@ -10,7 +10,7 @@ class _MyhomeState extends State<Myhome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: Mybody()),
+      body: Mybody(),
     );
   }
 }
@@ -18,8 +18,18 @@ class _MyhomeState extends State<Myhome> {
 class Mybody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text(
-      'HOME SCREEN'
+    return SafeArea(
+      child: Column(
+        children: [
+          FlatButton.icon(
+            onPressed: (){
+              Navigator.pushNamed(context, '/location');
+            },
+            icon: Icon(Icons.edit_location),
+            label: Text('Edit Location'),
+          ),
+        ],
+      ),
     );
   }
 }

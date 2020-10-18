@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:world_time_app/pages/choose_location.dart';
 import 'package:world_time_app/pages/home.dart';
+import 'package:world_time_app/pages/loading.dart';
 
 void main()=> runApp(MyApp());
 
@@ -9,7 +11,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Myhome(),
+      //home: Myhome(),
+      initialRoute: '/home',
+      routes: {
+        '/': (context)=>Loading(),
+        '/home':(context)=>Myhome(),
+        '/location':(context)=>ChooseLocation(),
+      },
     );
   }
 }
