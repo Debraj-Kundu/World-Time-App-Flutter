@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: Myhome(),
-      initialRoute: '/home',
+      initialRoute: '/',
       routes: {
         '/': (context)=>Loading(),
         '/home':(context)=>Myhome(),
